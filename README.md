@@ -24,8 +24,8 @@ While not specific requirements, the code was tested using the folowing versions
 - **NumPy**: 1.26.4
 - **SciPy**: 1.13.1
 - **fft-conv-pytorch**: 1.2.0
-- **matplotlib**: (version not specified)
-- **scikit-image**: (version not specified)
-- **tqdm**: (version not specified)
+- **matplotlib**: 3.8.4
+- **scikit-image**: 0.23.2
+- **tqdm**: 4.66.4
 
 The list of Python packages and dependencies are specified in the [`requirements.txt`](requirements.txt) file.
