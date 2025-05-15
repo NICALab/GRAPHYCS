@@ -12,3 +12,20 @@ Fluorescence microscopy of biological structures is fundamentally limited by abe
 ---
 
 
+## Requirements
+
+While not specific requirements, the code was tested using the folowing versions of the Python packages and dependencies:
+
+- **Python**: 3.11.10  
+- **CUDA**: 12.4 (if using GPU)
+- **PyTorch**: 2.2.1
+- **torchvision**: 0.17.1
+- **torchaudio**: 2.2.1
+- **NumPy**: 1.26.4
+- **SciPy**: 1.13.1
+- **fft-conv-pytorch**: 1.2.0
+- **matplotlib**: (version not specified)
+- **scikit-image**: (version not specified)
+- **tqdm**: (version not specified)
+
+The list of Python packages and dependencies are specified in the [`requirements.txt`](requirements.txt) file.
