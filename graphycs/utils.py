@@ -1,10 +1,5 @@
 
-"""
-Copyright (c) 2022      Ries Lab, EMBL, Heidelberg, Germany
-All rights reserved     Heintzmann Lab, Friedrich-Schiller-University Jena, Germany
 
-@author: Rainer Heintzmann, Sheng Liu, Jonas Hellgoth
-"""
 
 import torch
 import torch.fft
@@ -21,7 +16,12 @@ defaultTFCpxDataType="complex64"
 
 ##### The following code for zernike polynomial generation / noll and ANSI indexing is copied from the uiPSF code
 ##### https://github.com/ries-lab/uiPSF
+"""
+Copyright (c) 2022      Ries Lab, EMBL, Heidelberg, Germany
+All rights reserved     Heintzmann Lab, Friedrich-Schiller-University Jena, Germany
 
+@author: Rainer Heintzmann, Sheng Liu, Jonas Hellgoth
+"""
 
 def nl2noll(n,l):
     mm = abs(l)
