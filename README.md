@@ -40,7 +40,7 @@ cd ./GRAPHYCS
 conda create -n graphycs python=3.11.10
 conda activate graphycs
 ```
-**4. Install all of the necessary packages using requirements.txt**
+**4. In the conda environment, install all of the necessary packages using requirements.txt**
 ```bash
 pip install -r requirements.txt
 ```
