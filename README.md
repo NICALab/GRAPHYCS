@@ -20,10 +20,10 @@ In order to reconstruct the results of our paper, download the data from Zenodo 
 
 To reconstruct the results for simulated/experimental data, run the script with the appropriate forward model.
 GRAPHYCS is comprised of 4 different forward models:
-spatially invariant forward model for widefield imaging (GRAPHYCS_spatially_invariant_wf.py),
-spatially variant forward model for widefield imaging (GRAPHYCS_spatially_invariant_wf.py), 
-spatially invariant forward model for light-sheet imaging (GRAPHYCS_spatially_invariant_lsm.py), 
-spatially variant forward model for light-sheet imaging (GRAPHYCS_spatially_variant_lsm.py).
+- **Widefield — spatially invariant:** `graphycs/GRAPHYCS_spatially_invariant_wf.py`
+- **Widefield — spatially variant:** `graphycs/GRAPHYCS_spatially_variant_wf.py`
+- **Light-sheet — spatially invariant:** `graphycs/GRAPHYCS_spatially_invariant_lsm.py`
+- **Light-sheet — spatially variant:** `graphycs/GRAPHYCS_spatially_variant_lsm.py`
 
 For example, to reconstruct the experimental results for widefield data in Figure 3, run the following:
 
@@ -45,7 +45,7 @@ python graphycs/GRAPHYCS_spatially_variant_wf.py \
         --zernike_coeff_path             "Data/Figure4/appliedCoeff.txt" \
         --use_flat_field_correction       1 \
         --illum_path                     "Data/IlluminationProfile/Illumination_Profile.tif"
-        
+```        
 
 
 ## Requirements
