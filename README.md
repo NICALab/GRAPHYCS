@@ -14,6 +14,37 @@ Fluorescence microscopy is fundamentally limited by aberrations that degrade res
 
 You can download the dataset used for GRAPHYCS from https://zenodo.org/records/15421484.
 
+## Requirements
+
+While not specific requirements, the code was tested using the folowing versions of the Python packages and dependencies:
+
+- **Python**: 3.11.10  
+- **CUDA**: 12.4
+- **PyTorch**: 2.2.1
+
+## Installation
+
+You can install GRAPHYCS as follows:
+
+**1. Clone the directory**
+```bash
+git clone https://github.com/NICALab/GRAPHYCS.git
+```
+**2. Navigate into the directory**
+```bash
+cd ./GRAPHYCS
+```
+
+**3. Create and activate a new conda environment**
+```bash
+conda create -n graphycs python=3.11.10
+conda activate graphycs
+```
+**4. Install all of the necessary packages using requirements.txt**
+```bash
+pip install -r requirements.txt
+```
+
 ## Reproducing Experimental Results
 
 In order to reconstruct the results of our paper, download the data from Zenodo and place them in a Data folder. 
@@ -48,20 +79,6 @@ python graphycs/GRAPHYCS_spatially_variant_wf.py \
 ```        
 
 
-## Requirements
 
-While not specific requirements, the code was tested using the folowing versions of the Python packages and dependencies:
-
-- **Python**: 3.11.10  
-- **CUDA**: 12.4 (if using GPU)
-- **PyTorch**: 2.2.1
-- **torchvision**: 0.17.1
-- **torchaudio**: 2.2.1
-- **NumPy**: 1.26.4
-- **SciPy**: 1.13.1
-- **fft-conv-pytorch**: 1.2.0
-- **matplotlib**: 3.8.4
-- **scikit-image**: 0.23.2
-- **tqdm**: 4.66.4
 
 The list of Python packages and dependencies are specified in the [`requirements.txt`](requirements.txt) file.
