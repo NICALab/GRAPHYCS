@@ -20,10 +20,10 @@ In order to reconstruct the results of our paper, download the data from Zenodo 
 
 To reconstruct the results for simulated/experimental data, run the script with the appropriate forward model.
 GRAPHYCS is comprised of 4 different forward models:
-Spatially invariant forward model for widefield imaging (GRAPHYCS_spatially_invariant_wf.py)
-Spatially variant forward model for widefield imaging (GRAPHYCS_spatially_invariant_wf.py)
-Spatially invariant forward model for light-sheet imaging (GRAPHYCS_spatially_invariant_lsm.py)
-Spatially variant forward model for light-sheet imaging (GRAPHYCS_spatially_variant_lsm.py)
+spatially invariant forward model for widefield imaging (GRAPHYCS_spatially_invariant_wf.py),
+spatially variant forward model for widefield imaging (GRAPHYCS_spatially_invariant_wf.py), 
+spatially invariant forward model for light-sheet imaging (GRAPHYCS_spatially_invariant_lsm.py), 
+spatially variant forward model for light-sheet imaging (GRAPHYCS_spatially_variant_lsm.py).
 
 For example, to reconstruct the experimental results for widefield data in Figure 3, run the following:
 
