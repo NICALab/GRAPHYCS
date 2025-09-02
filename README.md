@@ -18,13 +18,13 @@ You can download the dataset used for GRAPHYCS from https://zenodo.org/records/1
 
 In order to download the data from the bash folder, download the data for the figures of our paper from Zenodo and place them in a Data folder. 
 
-To reconstruct the results for simulations under ideal conditions, run the following:
+To reconstruct the results for simulated data under ideal conditions, run the following:
 
 ```bash
 
 python graphycs/GRAPHYCS_spatially_invariant_wf.py \
         --base_dir               "Results" \
-        --exp_name               "ideal_simulated_no_self_calib" \
+        --exp_name               "ideal_simulated_results" \
         --data_path              "Data/Figure2/Diversity_Images_Ideal.tif" \
         --zernike_coeff_path     "Data/Figure2/appliedCoeff.txt" \
         --epochs                 2001 \
@@ -39,6 +39,96 @@ python graphycs/GRAPHYCS_spatially_invariant_wf.py \
         --learnable_scale_lr     1e-6 \
         --fourier_loss_weight    7e-4 \
         --vis_frequency          100
+```
+To reconstruct the results for simulated data under non-ideal conditions with system imperfections for Figure 2, run the following:
+
+```bash
+python graphycs/GRAPHYCS_spatially_invariant_wf.py \
+        --base_dir               "Results" \
+        --exp_name               "nonideal_simulated_results" \
+        --data_path              "Data/Figure2/Diversity_Images_Nonideal.tif" \
+        --zernike_coeff_path     "Data/Figure2/appliedCoeff.txt" \
+        --epochs                 2001 \
+        --use_affine_transform   1 \
+        --use_learnable_scales   1 \
+        --use_flat_field_correction 0 \
+        --n_imm                  1.0 \
+        --batch_size             12 \
+        --lr                     1e-2 \
+        --object_lr              2e-3 \
+        --affine_transform_lr    1e-3 \
+        --learnable_scale_lr     5e-4 \
+        --fourier_loss_weight    7e-4 \
+        --vis_frequency          100
+```
+
+To reconstruct the results for the pancreas data of 274 μm x 274 μm for Figure 3, run the following:
+
+```bash
+python graphycs/GRAPHYCS_spatially_invariant_wf.py \
+        --base_dir               "Results" \
+        --exp_name               "pancreas_crop" \
+        --data_path              "Data/Figure3/Diversity_Images_Nonideal.tif" \
+        --zernike_coeff_path     "Data/Figure3/appliedCoeff.txt" \
+        --epochs                 1001 \
+        --use_affine_transform   1 \
+        --use_learnable_scales   1 \
+        --use_flat_field_correction 0 \
+        --n_imm                  1.0 \
+        --batch_size             12 \
+        --lr                     1e-2 \
+        --object_lr              1e-2 \
+        --affine_transform_lr    1e-4 \
+        --learnable_scale_lr     1e-4 \
+        --fourier_loss_weight    5e-4 \
+        --vis_frequency          100
+```
+To reconstruct the results for the pancreas data of 1024 μm x 1024 μm for Figure 4 using the spatially invariant model, place the illumination profile for flat-field correction in the Data directory as well.
+
+```bash
+python graphycs/GRAPHYCS_spatially_invariant_WF.py \
+        --base_dir               "Results" \
+        --exp_name               "pancreas_full_fov_invariant_forward_model" \
+        --epochs                 1001 \
+        --use_affine_transform   1 \
+        --use_learnable_scales   1 \
+        --use_flat_field_correction 1 \
+        --illum_path             "Data/IlluminationProfile/Illumination_Profile.tif" \
+        --n_imm                  1.33 \
+        --batch_size             10 \
+        --data_path              "Data/Figure4/Diversity_Images_SampleAberration_Pancreas_LargeFoV.tif" \
+        --zernike_coeff_path     "Data/Figure4/appliedCoeff.txt" \
+        --lr                     1e-2 \
+        --object_lr              2e-3 \
+        --affine_transform_lr    1e-4 \
+        --learnable_scale_lr     1e-4 \
+        --fourier_loss_weight    1e-3 \
+        --vis_frequency          100
+```
+To reconstruct the results for the pancreas data of 1024 μm x 1024 μm for Figure 4 using the spatially variant model, run the following:
+
+```bash
+python graphycs/GRAPHYCS_spatially_variant_wf.py \
+        --base_dir               "Results" \
+        --exp_name               "pancreas_full_fov_variant_forward_model" \
+        --epochs                 1001 \
+        --use_affine_transform   1 \
+        --use_learnable_scales   1 \
+        --use_flat_field_correction 1 \
+        --illum_path             "Data/IlluminationProfile/Illumination_Profile.tif" \
+        --n_imm                  1.33 \
+        --batch_size             10 \
+        --data_path              "/media/NAS_179/01_data/CADABRA_CAO/Data_WF_manuscript_250821/Zenodo/Figure4/Diversity_Images_SampleAberration_Pancreas_LargeFoV.tif" \
+        --zernike_coeff_path     "/media/NAS_179/01_data/CADABRA_CAO/Data_WF_manuscript_250821/Zenodo/Figure4/appliedCoeff.txt" \
+        --lr                     1e-2 \
+        --object_lr              2e-3 \
+        --affine_transform_lr    1e-4 \
+        --learnable_scale_lr     1e-4 \
+        --fourier_loss_weight    1e-3 \
+        --num_patches           8 \
+        --spatially_varying_weight  0.002 \
+        --vis_frequency          100
+```
 
 ## Requirements
 
