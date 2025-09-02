@@ -20,8 +20,8 @@ In order to download the data from the bash folder, download the data for the fi
 
 To reconstruct the results for simulations under ideal conditions, run the following:
 
-```markdown
-~~~bash
+```bash
+
 python graphycs/GRAPHYCS_spatially_invariant_wf.py \
         --base_dir               "Results" \
         --exp_name               "ideal_simulated_no_self_calib" \
@@ -39,7 +39,7 @@ python graphycs/GRAPHYCS_spatially_invariant_wf.py \
         --learnable_scale_lr     1e-6 \
         --fourier_loss_weight    7e-4 \
         --vis_frequency          100
-~~~
+
 ## Requirements
 
 While not specific requirements, the code was tested using the folowing versions of the Python packages and dependencies:
