@@ -18,7 +18,6 @@ You can download the dataset used for GRAPHYCS from https://zenodo.org/records/1
 
 In order to reconstruct the results of our paper, download the data from Zenodo and place them in a Data folder. 
 
-```
 To reconstruct the results for simulated/experimental data, run the script with the appropriate forward model.
 GRAPHYCS is comprised of 4 different forward models:
 Spatially invariant forward model for widefield imaging (GRAPHYCS_spatially_invariant_wf.py)
