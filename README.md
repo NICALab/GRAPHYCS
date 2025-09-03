@@ -2,7 +2,7 @@
 
 This repository contains the open-source code for the paper:
 
-**"Graph-based modeling of optical system enables adaptive optics with self-calibration over large field of view"**
+**"Graph-based modeling of optical system enables adaptive optics on dynamic samples with self-calibration"**
 
 
 ## About GRAPHYCS
@@ -12,7 +12,7 @@ Fluorescence microscopy is fundamentally limited by aberrations that degrade res
 ---
 ## Dataset
 
-You can download the dataset used for GRAPHYCS from https://zenodo.org/records/15421484.
+You can download the dataset used for GRAPHYCS from https://zenodo.org/records/17049780.
 
 ## Requirements
 
