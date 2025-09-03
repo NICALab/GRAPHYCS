@@ -24,11 +24,11 @@ if __name__=="__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--exp_name", default='wf_pancreas_invariant_results', type=str)
-    parser.add_argument("--lr", default=1e-2, type=float) # 1e-3
-    parser.add_argument("--object_lr", default=1e-2, type=float) # 1e-3
-    parser.add_argument("--affine_transform_lr", default=1e-4, type=float) # 1e-3
-    parser.add_argument("--learnable_scale_lr", default=1e-4, type=float) # 1e-3
-    parser.add_argument("--fourier_loss_weight", default=5e-4, type=float)  # 4.61e-7  2.44e-7 1e-9
+    parser.add_argument("--lr", default=1e-2, type=float)
+    parser.add_argument("--object_lr", default=1e-2, type=float)
+    parser.add_argument("--affine_transform_lr", default=1e-4, type=float)
+    parser.add_argument("--learnable_scale_lr", default=1e-4, type=float)
+    parser.add_argument("--fourier_loss_weight", default=5e-4, type=float)
 
 
     parser.add_argument("--seed", default=0, type=int)
@@ -41,10 +41,10 @@ if __name__=="__main__":
     parser.add_argument("--psf_path", default="None", type=str) 
 
     ### set options for using STN and learnable scales
-    parser.add_argument("--use_affine_transform", default=1, type=int) # 1, 0
-    parser.add_argument("--use_learnable_scales", default=1, type=int) # 1,0
-    parser.add_argument("--use_motion_estimation", default=0, type=int) # 1,0
-    parser.add_argument("--use_activity_estimation", default=0, type=int) # 1,0
+    parser.add_argument("--use_affine_transform", default=1, type=int)
+    parser.add_argument("--use_learnable_scales", default=1, type=int)
+    parser.add_argument("--use_motion_estimation", default=0, type=int)
+    parser.add_argument("--use_activity_estimation", default=0, type=int)
 
     parser.add_argument("--use_scheduler", default=0, type=bool)
 
@@ -55,8 +55,8 @@ if __name__=="__main__":
     parser.add_argument('--n_max_estimated', type=int, default=14, help='maximum order of the zernike polynomials in the ANSI indexing scheme estimated by the algorithm')
 
     parser.add_argument("--NA", default=0.3, type=float)
-    parser.add_argument("--camera_pixel_size", default=0.5343e-6, type=float) #0.65 0.534323613 0.534323613
-    parser.add_argument("--wavelength", default=0.513e-6, type=float) # 0.5 513e 
+    parser.add_argument("--camera_pixel_size", default=0.5343e-6, type=float)
+    parser.add_argument("--wavelength", default=0.513e-6, type=float)
     parser.add_argument("--n_imm", default=1.33, type=float)
 
     parser.add_argument("--use_flat_field_correction", default=0, type=int)
@@ -66,9 +66,9 @@ if __name__=="__main__":
     parser.add_argument("--silence_tqdm", default=0, type=int)
     parser.add_argument("--vis_intermediates", default=1, type=int)
     parser.add_argument("--vis_frequency", default=200, type=int)
-    parser.add_argument("--use_L1_loss", default=1, type=int) # 1, 0
+    parser.add_argument("--use_L1_loss", default=1, type=int)
 
-    parser.add_argument("--use_batch_shuffling", default=1, type=int) # 1, 0
+    parser.add_argument("--use_batch_shuffling", default=1, type=int)
 
 
     opt = parser.parse_args()
