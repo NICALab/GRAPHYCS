@@ -25,15 +25,15 @@ if __name__=="__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--exp_name", default='single_patch_03112025', type=str)
-    parser.add_argument("--lr", default=5e-3, type=float) # 1e-3
-    parser.add_argument("--object_lr", default=5e-4, type=float) # 1e-3
-    parser.add_argument("--affine_transform_lr", default=1e-4, type=float) # 1e-3
-    parser.add_argument("--learnable_scale_lr", default=1e-4, type=float) # 1e-3
-    parser.add_argument("--motion_param_lr", default=1e-5, type=float) # 1e-3
-    parser.add_argument("--activity_lr", default=1e-3, type=float) # 1e-3
-    parser.add_argument("--varying_coef_lr", default=1e-3, type=float) # 1e-3
+    parser.add_argument("--lr", default=5e-3, type=float)
+    parser.add_argument("--object_lr", default=5e-4, type=float)
+    parser.add_argument("--affine_transform_lr", default=1e-4, type=float)
+    parser.add_argument("--learnable_scale_lr", default=1e-4, type=float)
+    parser.add_argument("--motion_param_lr", default=1e-5, type=float)
+    parser.add_argument("--activity_lr", default=1e-3, type=float)
+    parser.add_argument("--varying_coef_lr", default=1e-3, type=float)
 
-    parser.add_argument("--fourier_loss_weight", default=1e-4, type=float)  # 4.61e-7  2.44e-7 1e-9
+    parser.add_argument("--fourier_loss_weight", default=1e-4, type=float)
     parser.add_argument("--seed", default=0, type=int)
 
     parser.add_argument("--data_path", type=str) 
@@ -44,10 +44,10 @@ if __name__=="__main__":
     parser.add_argument("--psf_path", default="None", type=str) 
 
     ### set options for using STN and learnable scales
-    parser.add_argument("--use_affine_transform", default=1, type=int) # 1, 0
-    parser.add_argument("--use_learnable_scales", default=1, type=int) # 1,0
-    parser.add_argument("--use_motion_estimation", default=1, type=int) # 1,0
-    parser.add_argument("--use_activity_estimation", default=1, type=int) # 1,0
+    parser.add_argument("--use_affine_transform", default=1, type=int)
+    parser.add_argument("--use_learnable_scales", default=1, type=int)
+    parser.add_argument("--use_motion_estimation", default=1, type=int)
+    parser.add_argument("--use_activity_estimation", default=1, type=int)
 
     parser.add_argument("--use_scheduler", default=0, type=bool)
 
