@@ -21,12 +21,12 @@ from forward_model_wf_variant import forward_model_wf_variant
 if __name__=="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--exp_name", default='single_patch_03112025', type=str)
-    parser.add_argument("--lr", default=1e-2, type=float) # 1e-3
-    parser.add_argument("--object_lr", default=2e-3, type=float) # 1e-3
-    parser.add_argument("--affine_transform_lr", default=1e-4, type=float) # 1e-3
-    parser.add_argument("--learnable_scale_lr", default=1e-4, type=float) # 1e-3
-    parser.add_argument("--motion_param_lr", default=1e-3, type=float) # 1e-3
-    parser.add_argument("--fourier_loss_weight", default=1e-3, type=float)  # 4.61e-7  2.44e-7 1e-9
+    parser.add_argument("--lr", default=1e-2, type=float)
+    parser.add_argument("--object_lr", default=2e-3, type=float)
+    parser.add_argument("--affine_transform_lr", default=1e-4, type=float)
+    parser.add_argument("--learnable_scale_lr", default=1e-4, type=float)
+    parser.add_argument("--motion_param_lr", default=1e-3, type=float)
+    parser.add_argument("--fourier_loss_weight", default=1e-3, type=float)
 
 
     parser.add_argument("--seed", default=0, type=int)
@@ -39,8 +39,8 @@ if __name__=="__main__":
     parser.add_argument("--psf_path", default="None", type=str) 
 
     ### set options for using STN and learnable scales
-    parser.add_argument("--use_affine_transform", default=1, type=int) # 1, 0
-    parser.add_argument("--use_learnable_scales", default=1, type=int) # 1,0
+    parser.add_argument("--use_affine_transform", default=1, type=int)
+    parser.add_argument("--use_learnable_scales", default=1, type=int)
     parser.add_argument("--use_scheduler", default=0, type=bool)
 
 
@@ -53,8 +53,8 @@ if __name__=="__main__":
     parser.add_argument("--illum_path", default="Data/IlluminationProfile/Illumination_Profile.tif", type=str)
 
     parser.add_argument("--NA", default=0.3, type=float)
-    parser.add_argument("--camera_pixel_size", default=0.5343e-6, type=float) #0.65 0.534323613 0.534323613
-    parser.add_argument("--wavelength", default=0.513e-6, type=float) # 0.5 513e 
+    parser.add_argument("--camera_pixel_size", default=0.5343e-6, type=float)
+    parser.add_argument("--wavelength", default=0.513e-6, type=float) 
     parser.add_argument("--n_imm", default=1.33, type=float)
 
 
