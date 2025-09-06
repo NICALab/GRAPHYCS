@@ -66,7 +66,7 @@ python graphycs/GRAPHYCS_spatially_invariant_wf.py \
         --zernike_coeff_path     "Data/Figure2/appliedCoeff.txt"
         
 ```
-To apply flat-field correction for data imaged with the large 1094 μm x 1094 μm field of view in Figure 4, place the illumination profile in the Data directory as well: 
+To apply flat-field correction for pancreas tissue data in Figure 3 and Figure 4, place the illumination profile in the Data directory as well: 
 
 ```bash
 python graphycs/GRAPHYCS_spatially_variant_wf.py \
