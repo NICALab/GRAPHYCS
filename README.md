@@ -47,7 +47,8 @@ pip install -r requirements.txt
 
 ## Executable demonstration
 
-A demonstration of our algorithm on an aberrated image can be used in **GRAPHYCS_demo.ipynb**.\\
+A demonstration of our algorithm on an aberrated image can be used in **GRAPHYCS_demo.ipynb**.
+
 Download the repository on your workspace and run the demo to see the results on the aberrated image in the Data folder. 
 
 ## Reproducing Experimental Results
