@@ -4,10 +4,14 @@ This repository contains the open-source code for the paper:
 
 **"Graph-based modeling of optical system enables adaptive optics on dynamic samples with self-calibration"**
 
+*iScience* 29, 116769 (2026). https://doi.org/10.1016/j.isci.2026.116769
 
 ## About GRAPHYCS
 
+<sub>
 Sensor less adaptive optics offers significant advantages over hardware-based wavefront sensing but faces persistent challenges: Its performance degrades when idealized models fail to capture system imperfections, it is largely restricted to spatially invariant aberrations, and it cannot accommodate dynamic biological samples due to static-object assumptions. Here we present graph-modeling and phase-diversity-based computational adaptive optics with self-calibration (GRAPHYCS), a differentiable graph-based modeling framework that addresses all three limitations. GRAPHYCS automatically self-calibrates to correct system-specific non-idealities, enables spatially variant wavefront sensing across extended fields of view by modeling local aberrations, and supports dynamic live-sample imaging where conventional computational methods fail. In simulations, GRAPHYCS achieves up to a 9-fold improvement in wavefront sensing accuracy compared to analytic phase diversity under system non-idealities. In real microscopy experiments, it consistently outperforms phase-diversity-based methods compared in this study. Furthermore, in live zebrafish brain imaging, GRAPHYCS enables simultaneous wavefront sensing and neuronal activity detection—an application beyond the reach of existing approaches without additional hardware complexity.
+</sub>
+
 ---
 ## Dataset
 
