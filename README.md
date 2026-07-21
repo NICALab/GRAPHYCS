@@ -89,3 +89,93 @@ python graphycs/GRAPHYCS_spatially_variant_wf.py \
 
 
 The list of Python packages and dependencies are specified in the [`requirements.txt`](requirements.txt) file.
+
+## Model Variants
+
+### Widefield, Spatially Invariant
+
+Use `GRAPHYCS_spatially_invariant_wf.py` when the aberration is modeled as field-independent.
+
+### Widefield, Spatially Variant
+
+Use `GRAPHYCS_spatially_variant_wf.py` when the field of view is divided into local patches with spatially varying aberrations.
+In order to reproduce the results of Figure 4 of the GRAPHYCS paper, put the Illumination_Profile.tif from Zenodo in a directory and provide as an input to --illum_path.
+
+### Light-Sheet, Spatially Invariant
+
+Use `GRAPHYCS_spatially_invariant_lsm.py` for light-sheet data with dynamic-sample support through optional motion and sparse activity estimation.
+
+### Light-Sheet, Spatially Variant
+
+Use `GRAPHYCS_spatially_variant_lsm.py` for light-sheet data with spatially varying wavefronts, optional motion estimation, and sparse activity estimation.
+
+## Default Saved Results
+
+Each run writes outputs under:
+
+```text
+<base_dir>/<exp_name>/
+```
+
+
+### Common outputs for all model variants
+
+- `loss_curve.png`  
+  Updated at `--vis_frequency`. Shows the tracked training losses for the active model.
+
+- `phase_estimations/phase_epoch_XXXXXX.png`  
+  Intermediate estimated spatially invariant phase maps, saved at `--vis_frequency`. 
+
+- `found_objects/estimated_object_stack_every_100_epochs.tif`  
+  Estimated object snapshots saved as a `float32` TIFF stack using `skimage.io`. One new slice is appended every 100 epochs, starting at epoch 0. 
+
+### Self-calibration outputs
+
+When affine transformation self-calibration is enabled:
+
+- `affine_transforms/affine_transform_params_XXXXXX.txt`  
+  Saved at `--vis_frequency`. Columns are `[off_x, off_y, amp_x, amp_y, rot, grid]`.
+
+When learnable Zernike scales are enabled:
+
+- `learnable_scales/learnable_scales_XXXXXX.txt`  
+  Saved at `--vis_frequency`. No learnable-scale PNG is saved by default.
+
+When motion estimation is enabled for light-sheet runs:
+
+- `motion_factors/motion_factors_XXXXXX.txt`  
+  Saved at `--vis_frequency`. Each row stores the learned motion shift parameters for one diversity image/sample index.
+
+### Spatially variant convolution outputs
+
+For `GRAPHYCS_spatially_variant_wf.py` and `GRAPHYCS_spatially_variant_lsm.py`:
+
+- `phase_estimations/spatially_varying_phase_epoch_XXXXXX.png`  
+  Spatially varying phase component grid, saved in the same folder and at the same frequency as the spatially invariant phase map. 
+
+### Dynamic light-sheet outputs
+
+For light-sheet runs with sparse activity estimation enabled:
+
+- `found_objects/final_dynamic_sample_component.tif`  
+  Final learned dynamic sample component saved once at the end of training as a `float32` TIFF stack using `skimage.io`. The saved array layout is `(height, width, component_index)`.
+
+The default result-saving profile does not write PSF stacks, amplitude stacks, residual wavefront images, coefficient text dumps, or final-results bundles.
+
+## License
+
+This repository is distributed under the GNU General Public License v3.0. See `LICENSE` for details.
+
+## Citation
+
+If you use GRAPHYCS, please cite the accompanying manuscript:
+
+```bibtex
+@article{graphycs,
+  title={Graph-based modeling of optical system enables adaptive optics on dynamic samples with self-calibration},
+  author={Eun-Seo Cho, Joon Park, Hyungwon Jin, Yoonjae Chung, Minho Eom, Hyejin Shin, Jae-Byum Chang, Jung-Hoon Park, Young-Gyu Yoon},
+  journal={iScience},
+  year={2026}
+}
+```
+
